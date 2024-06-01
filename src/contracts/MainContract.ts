@@ -1,5 +1,4 @@
-import { Address, Cell, Contract, ContractABI, ContractProvider, SendMode, Sender, StateInit, beginCell, contractAddress } from '@ton/core';
-import { Maybe } from '@ton/core/dist/utils/maybe';
+import { Address, Cell, Contract, ContractProvider, SendMode, Sender, beginCell, contractAddress } from '@ton/core';
 
 
 export type MainContractConfig = {
