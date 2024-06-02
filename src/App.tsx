@@ -3,6 +3,8 @@ import { TonConnectButton } from "@tonconnect/ui-react";
 import { useMainContract } from "./hooks/useMainContract";
 import { useTonConnect } from "./hooks/useTonConnect";
 import { fromNano } from "@ton/core";
+import WebApp from '@twa-dev/sdk'
+
 
 function App() {
   const {
@@ -15,6 +17,10 @@ function App() {
   } = useMainContract();
 
   const { connected } = useTonConnect();
+
+  const showAlert = () => {
+    WebApp.showAlert('Hey there!');
+  }
 
   return (
     <div>
@@ -33,17 +39,26 @@ function App() {
           <b>Counter Value</b>
           <div>{counter_value ?? "Loading..."}</div>
         </div>
-        {connected && (
-          <a
-            onClick={() => {
-              sendIncrement();
-            }}
-          >
-            Increment
-          </a>
-        )}
+        <a
+          onClick={() => {
+            sendIncrement();
+          }}
+        >
+          Increment
+        </a>
 
-        <br/>
+        <br />
+
+        <a
+          onClick={() => {
+            showAlert();
+          }}
+        >
+          Alert
+        </a>
+
+
+        <br />
 
         {connected && (
           <a
@@ -55,7 +70,7 @@ function App() {
           </a>
         )}
 
-        <br/>
+        <br />
 
         {connected && (
           <a
