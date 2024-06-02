@@ -11,7 +11,6 @@ function App() {
     contract_address,
     counter_value,
     contract_balance,
-    sendIncrement,
     sendDeposit,
     sendWithdrawalRequest,
   } = useMainContract();
