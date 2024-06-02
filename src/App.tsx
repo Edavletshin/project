@@ -21,6 +21,9 @@ function App() {
   const showAlert = () => {
     WebApp.showAlert('Hey there!');
   }
+  const sendData = () => {
+    WebApp.sendData('Hey there!');
+  }
 
   return (
     <div>
@@ -41,7 +44,7 @@ function App() {
         </div>
         <a
           onClick={() => {
-            sendIncrement();
+            sendData();
           }}
         >
           Increment
